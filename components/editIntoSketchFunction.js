@@ -1,5 +1,7 @@
 // editIntoSketchFunction.js
 async function editIntoSketchFunction(editOptions1, newPage) {
+    console.log('editIntoSketchFunction')
+
     try {
         const desiredOption2 = 'Edit…'; // The desired option to choose
         console.log('Desired edit option:', desiredOption2);

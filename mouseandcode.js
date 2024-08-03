@@ -10,7 +10,6 @@ const copySketchFunction = require('./components/copySketchFunction.js');
 const pasteIntoSketchFunction = require('./components/pasteIntoSketchFunction.js');
 const editIntoSketchFunction = require('./components/editIntoSketchFunction.js');
 const renameIntoSketchFunction = require('./components/renameIntoSketchFunction.js');
-// require('events').EventEmitter.defaultMaxListeners = 20;
 const searchAndClickTransform = require('./components/searchAndClickTransform.js');
 const searchAndClickCustomExtrude2 = require('./components/searchAndClickCustomExtrude2.js');
 const searchAndClickExtrude = require('./components/searchAndClickExtrude.js');
@@ -30,8 +29,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         // Launch browser and navigate to the document
         const newPage = await launchBrowserAndNavigateToDocument(); // Ensure this returns a newPage object
 
-
-        //////////////////////////////////////////////////////////////////////////
         // Call the selectCancelButton
         await selectCancelButton(newPage);
 
@@ -44,56 +41,47 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         const selector = 'div[data-id="XgmGAQ7RqnVg1wa8"]'; // Replace with the appropriate selector
         const title = '(2) Extrude 1(4.00) did not regenerate properly: Select face or sketch region to extrude.'; // Replace with the desired title
         const editOptions3 = await performRightClickOptionByTitle(newPage, selector, title);
-        // console.log(editOptions3);
         console.log("AAAAAAAAAA");
         await waitForEnter();
         console.log("BBBBBBBBBB");
-        console.log('editIntoSketchFunction')
         editIntoSketchFunction(editOptions3, newPage);
         ////////////////////////////////////////////////////////////////////////////
 
 
-        console.log("EEEEEEEEEE");
+        console.log("Press enter when ready");
         await waitForEnter();
-        console.log("FFFFFFFFFF");
+        await selectOkButton(newPage);
+        console.log("Pressed enter");
 
 
         ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
         ////////////////////////////////////////////////////////////////////////////
-        await newPage.keyboard.press('Enter');
-        // console.log('await newPage.keyboard.press')
-        // const desiredIndex7 = 7;
-        // await clickButtonByIndex(newPage, desiredIndex7);
-        console.log("GGGGGGGGGGGG");
+        console.log("CCCCCCCCCC");
         await waitForEnter();
-        console.log("HHHHHHHHHH");
+        console.log("DDDDDDDDDD");
         const selector7 = 'div[data-id="AJC+8X/uU1MWWXEK"]'; // Replace with the appropriate selector
         const title7 = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.'; // Replace with the desired title
-        // const title7 = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.<br>1 missing selection'; // Replace with the desired title
-        console.log('Right-clicking on the specified element.');
         const editOptions7 = await performRightClickOptionByTitle(newPage, selector7, title7);
-        // console.log(editOptions7);
-        console.log("IIIIIIIIIIII");
+        console.log("EEEEEEEEEE");
         await waitForEnter();
-        console.log("JJJJJJJJJJJJJ");
+        console.log("FFFFFFFFFF");
         editIntoSketchFunction(editOptions7, newPage);
         ////////////////////////////////////////////////////////////////////////////
 
 
-        console.log("KKKKKKKKKKKKKK");
+        console.log("GGGGGGGGGG");
         await waitForEnter();
-        console.log("LLLLLLLLLLLLL");
+        await selectOkButton(newPage);
+        console.log("HHHHHHHHHH");
+        await waitForEnter();
+        console.log("IIIIIIIIII");
 
 
         //Working on (4) Extrude 2
         ////////////////////////////////////////////////////////////////////////////
         const selector8 = 'div[data-id="mypaWa+39o7YTdnA"]'; // Replace with the appropriate selector
-        // const title8 = '(4) Extrude 2 did not regenerate properly: No merge scope selected.<br>1 missing selection';
-        // const title8 = '(4) Extrude 2 did not regenerate properly: Select face or sketch region to extrude.<br>1 missing selection';
         const title8 = '(4) Extrude 2 did not regenerate properly: Select face or sketch region to extrude.';
-        console.log('Right-clicking on the specified element.');
         const editOptions8 = await performRightClickOptionByTitle(newPage, selector8, title8);
-        console.log(editOptions8);
         console.log("OOOOOOOOOO");
         await waitForEnter();
         console.log("PPPPPPPPPP");
@@ -111,7 +99,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         const title1 = '(1) Initial Sketch'; // Replace with the desired title
         console.log('Right-clicking on the specified element.');
         const editOptions1 = await performRightClickOptionByTitle(newPage, selector1, title1);
-        console.log(editOptions1);
         console.log("CCCCCCCCCC");
         await waitForEnter();
         console.log("DDDDDDDDDD");
@@ -340,35 +327,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("WWWWWWWWWWW")
 
 
-        //         // //RENAME
-        //         // console.log('Waited for 5 seconds.');
-        //         // console.log('WE START THE RENAME PHASE');
-        //         // await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5
-        //         // //ALL THE CODE TOGETHERx
-        //         // const desiredIndex3 = 7; // Or any other desired index
-        //         // await clickButtonByIndex(newPage, desiredIndex3);
-        //         // //Right click option 
-        //         // const selector3 = 'div[data-id="yyHiDTMWflCzpmJN"]'; // Replace with the appropriate selector
-        //         // const title3 = 'Sketch 1'; // Replace with the desired title
-        //         // const editOptions4 = await performRightClickOptionByTitle(newPage, selector3, title3);
-        //         // console.log(editOptions4);
-        //         // //NEED TO ADD THE EDIT FUNCTION HERE, LIKE pasteIntoSketchFunction OR copySketchFunction
-        //         // renameIntoSketchFunction(editOptions4, newPage);
-        //         // await new Promise(resolve => setTimeout(resolve, 40000)); // Wait for 10 seconds
-        //         // console.log('Waited for 40 seconds.'); console.log('AFTER THE CODE RUNS.');
-
-
-
-
-        //         //WE ARE CHECKING ENDING OF EDIT OPTIONS
-        //         console.log('Waited for 10 seconds.');
-        //         await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 5
-        //         console.log('Typing "Third Sketch"...');
-        //         await newPage.keyboard.type('Third Sketch');
-        //         await new Promise(resolve => setTimeout(resolve, 5000));
-
-
-
         ////////////////////
         await waitForEnter();
         ////////////////////
@@ -410,7 +368,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
                 console.error('Third button not found.');
             }
         });
-
 
 
         console.log("QQQQQQQQQQQ")
@@ -535,6 +492,11 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         ////////////////////
         await waitForEnter();
         console.log("LLLLLLLLLLLLLLLLL")
+        ////////////////////
+
+
+        //////////////////// Code to click Enter
+        // await newPage.keyboard.press('Enter');
         ////////////////////
 
 

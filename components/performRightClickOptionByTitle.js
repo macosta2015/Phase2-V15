@@ -1,4 +1,3 @@
-//March 26 Mario Acosta
 // performRightClickOptionByTitle.js
 async function performRightClickOptionByTitle(newPage, selector, title) {
     console.log('performRightClickOptionByTitle.');

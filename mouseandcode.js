@@ -103,13 +103,10 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("CCCCCCCCCC");
         await waitForEnter();
         console.log("DDDDDDDDDD");
-        console.log('copySketchFunction')
         copySketchFunction(editOptions1, newPage);
         // Select sketch to click or unclick, good code to select and unselect
         console.log("PASTE INTO SKETCH");
         await waitForEnter();
-        //We get an error here, because the title7 and selector7 just changed. 
-        // const selector7 = 'div[data-id="AJC+8X/uU1MWWXEK"]'; // Replace with the appropriate selector
         const title20 = '(3) Extrude Sketch(1.03)'; // Replace with the desired title
         const editOptions20 = await performRightClickOptionByTitle(newPage, selector7, title20);
         console.log("PASTE INTO SKETCH");
@@ -139,8 +136,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         //Working on (5) Extrude 3 PLAY(2.00)
         ////////////////////////////////////////////////////////////////////////////
         const selector9 = 'div[data-id="zUc3/N14UtKVlcJg"]'; // Replace with the appropriate selector
-        // const title9 = '(5) Extrude 3 PLAY(2.00) did not regenerate properly: Select face or sketch region to extrude.<br>2 missing selections';
-        // const title9 = '(5) Extrude 3 PLAY(2.00) did not regenerate properly: No merge scope selected.< br > 1 missing selection';
         const title9 = '(5) Extrude 3 PLAY(2.00) did not regenerate properly: No merge scope selected.<br>1 missing selection';
         console.log('Right-clicking on the specified element.');
         const editOptions9 = await performRightClickOptionByTitle(newPage, selector9, title9);
@@ -184,10 +179,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("CCCCCCCCCC");
         await waitForEnter();
         console.log("DDDDDDDDDD");
-        // console.log('editIntoSketchFunction')
-        // editIntoSketchFunction(editOptions1, newPage);
-        // Use the retrieved options for further actions (e.g., copySketchFunction)
-        console.log('copySketchFunction')
         copySketchFunction(editOptions2, newPage);
         // Select sketch to click or unclick, good code to select and unselect
         console.log("CCCCCCCCCC");
@@ -345,7 +336,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         const editOptions5 = await performRightClickOptionByTitle(newPage, selector, title);
         console.log(editOptions5);
         // const desiredOption = 'Copy sketch'; //TYPE WHICH EDIT OPTION YOU WANT TO CHOSE
-        console.log('copySketchFunction')
         copySketchFunction(editOptions5, newPage);
         console.log("YYYYYYYYYYY")
 

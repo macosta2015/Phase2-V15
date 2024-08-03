@@ -2,6 +2,7 @@
 async function copySketchFunction(editOptions3, newPage) {
     try {
         const desiredOption = 'Copy sketch'; // The desired option to choose
+        console.log('copySketchFunction')
         console.log('Desired option:', desiredOption);
 
         // Find the index of the desired option

@@ -48,10 +48,10 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         ////////////////////////////////////////////////////////////////////////////
 
 
-        // console.log("Press enter when ready");
-        // await waitForEnter();
-        // await selectOkButton(newPage);
-        // console.log("Pressed enter");
+        console.log("Press enter when ready");
+        await waitForEnter();
+        await selectOkButton(newPage);
+        console.log("Pressed enter");
 
 
         ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)

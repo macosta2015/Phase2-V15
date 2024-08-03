@@ -1,7 +1,7 @@
 //March 26 Mario Acosta
 // performRightClickOptionByTitle.js
 async function performRightClickOptionByTitle(newPage, selector, title) {
-    console.log('Right-click process started.');
+    console.log('performRightClickOptionByTitle.');
 
     try {
         // Find elements with the specified title

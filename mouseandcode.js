@@ -48,16 +48,17 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         ////////////////////////////////////////////////////////////////////////////
 
 
-        console.log("Press enter when ready");
-        await waitForEnter();
-        await selectOkButton(newPage);
-        console.log("Pressed enter");
+        // console.log("Press enter when ready");
+        // await waitForEnter();
+        // await selectOkButton(newPage);
+        // console.log("Pressed enter");
 
 
         ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
         ////////////////////////////////////////////////////////////////////////////
         console.log("CCCCCCCCCC");
         await waitForEnter();
+        await selectOkButton(newPage);
         console.log("DDDDDDDDDD");
         const selector7 = 'div[data-id="AJC+8X/uU1MWWXEK"]'; // Replace with the appropriate selector
         const title7 = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.'; // Replace with the desired title
